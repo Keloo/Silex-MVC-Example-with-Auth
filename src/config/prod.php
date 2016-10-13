@@ -17,7 +17,7 @@ $app['http_cache.cache_dir'] = $app['cache.path'] . '/http';
 $app['twig.options.cache'] = $app['cache.path'] . '/twig';
 
 // Assetic
-$app['assetic.enabled']					= true;
+$app['assetic.enabled']					= false;
 $app['assetic.path_to_cache']			= $app['cache.path'] . '/assetic' ;
 $app['assetic.path_to_web']				= PATH_PUBLIC . '/assets';
 $app['assetic.input.path_to_assets']	= PATH_SRC . '/assets';

@@ -9,7 +9,7 @@ use Silex\Provider\TranslationServiceProvider;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\UrlGeneratorServiceProvider;
 use Silex\Provider\ValidatorServiceProvider;
-use SilexAssetic\AsseticExtension;
+use SilexAssetic\AsseticServiceProvider;
 use Symfony\Component\Security\Core\Encoder\PlaintextPasswordEncoder;
 use Symfony\Component\Translation\Loader\YamlFileLoader;
 
@@ -77,7 +77,7 @@ $app->register(new TwigServiceProvider(), array(
 
 // Define assets.
 if (isset($app['assetic.enabled']) && $app['assetic.enabled']) {
-	$app->register(new AsseticExtension(), array(
+	$app->register(new AsseticServiceProvider(), array(
 		'assetic.options' => array(
 			'debug'			=> $app['debug'],
 			'auto_dump_assets' => $app['debug'],
